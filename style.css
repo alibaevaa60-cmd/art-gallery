@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Ruda:wght@400..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+   --white:#ffffff;
+   --color-gray:#D7D7D7;
+   --violet-purple:#8A40FF;
+   --black: #060A16; 
+   --Violet-Dream: linear-gradient(101.9deg, rgba(201, 34, 227, 0.4) 7.67%, rgba(153, 30, 234, 0.4) 52.66%, rgba(73, 23, 246, 0.4) 93.7%);
+/*  цвет для buttom */
+
+}
+.container{
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body{
+    background: var(--black);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:42px 0 115px;
+}
+.header nav{
+    display: flex;
+    list-style: none;
+    gap:48px;
+}
+.header a{
+text-decoration: none;
+font-family: Open Sans;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px; 
+line-height: 100%; 
+color:var(--white);
+
+}
+.last{
+    display: flex;
+    gap:24px;
+    align-items: center;
+}
+.last li{
+font-family: Open Sans;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px; 
+line-height: 100%; 
+color: var(--white);
+list-style: none;
+
+}
+.last button{
+font-family: Open Sans;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px; 
+line-height: 16px; 
+color:var(--white);
+background: var(--Violet-Dream);
+padding: 12px 24px;
+border-radius: 4px;
+border: none;
+
+}
+ /* </Header>*/
+
+
+ /* <Hero> */
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:115px;
+    
+}
+span{
+    color: #8A40FF;
+}
+.hero-text h1{
+padding-bottom: 12px;
+font-family: Ruda;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 64px; 
+line-height: 82px; 
+color:var(--white)
+
+}
+.hero-text p{
+padding-bottom: 40px;
+font-family: Open Sans;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px; 
+line-height: 150%; 
+color:var(--color-gray)
+
+}
+.btns{
+    display: flex;
+    align-items: center;
+    margin-bottom: 76px;
+}
+ .btns .button{
+padding: 16px 32px;
+font-family: Open Sans;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px; 
+line-height: 100%; 
+background: var(--Violet-Dream);
+color:var(--white);
+margin-right: 24px;
+border-radius: 4px;
+border:none;
+
+}
+.btns .play-button{
+display: flex;
+justify-content: center;
+align-items: center;
+background: var(--black);
+padding: 20px;
+border-radius: 50%;
+border-color: var(--violet-purple);
+margin-right: 16px;
+}
+
+.btns h6{
+font-family: Open Sans;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px; 
+line-height: 100%; 
+display: flex;
+align-items: center;
+color: var(--white);
+}
+.cards-like{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:70px;
+    padding: 24px 47px;  
+    background: rgba(255, 255, 255, 0.2); /* немного прозрачности */
+    backdrop-filter: blur(4px);
+    margin-bottom: 176px;
+}
+.like h5{
+font-family: Ruda;
+font-weight: 700;
+font-style: Bold;
+font-size: 36px; 
+line-height: 40px; 
+color:var(--white);;
+padding-bottom: 10px;
+
+}
+.like p{
+font-family: Open Sans;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px; 
+line-height: 100%; 
+color:var(--color-gray);
+
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  max-width: 620px;   /* ограничиваем, но не фиксируем */
+  aspect-ratio: 1 / 1; /* сохраняет пропорции без фиксированной высоты */
+  margin: 0 auto;
+}
+
+.hero-image img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Индивидуальные позиции — в % вместо пикселей */
+.hero-image .mask {
+ top: 7%;
+    left: 0;
+    z-index: 1;
+    width: 90%;
+}
+
+.hero-image .skeleton {
+   top: -10%;
+    right: -4%;
+    width: 50%;
+    z-index: 2;
+}
+
+.hero-image .heart {
+    bottom: 10%;
+    right: -8%;
+    width: 30%;
+    z-index: 3;
+}
+
+.hero-image .cat {
+  top: -20%;
+    left: -8%;
+    width: 25%;
+    z-index: 4;
+}
+
+.hero-image .violet {
+    top: -20%;
+    left: 35%;
+    width: 13%;
+    z-index: 5;
+}
+
+ /* </Hero> */
+
+ /* Galleries */
+ .galleries h1{
+font-family: Ruda;
+font-weight: 700;
+font-style: Bold;
+font-size: 48px; 
+line-height: 100%; 
+padding-bottom: 80px;
+text-align: center;
+color: var(--white);
+
+
+ }
+  .images{
+    display: flex;
+    justify-content: center;
+    gap:38px;
+  }
+.image {
+  display: flex;
+  gap: 18px;
+  padding: 24px 24px 40px 22px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  border-image: linear-gradient(
+    101.9deg,
+    rgba(201, 34, 227, 0.4) 7.67%,
+    rgba(153, 30, 234, 0.4) 52.66%,
+    rgba(73, 23, 246, 0.4) 93.7%
+  ) 1;
+}
+
+  .small-images{
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+
+  }
+  .image-text h2{
+font-family: Open Sans;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 20px; 
+line-height: 100%; 
+color: var(--white);
+padding: 24px 12px;
+
+  }
+.image-text p{
+font-family: Open Sans;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px; 
+line-height: 100%;
+color: var(--color-gray);
+
+}
+.text-h h3{
+ padding: 28px 25px;
+ color: var(--white);
+ font-family: Open Sans;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 24px; 
+line-height: 100%; 
+
+}
+
+
+ /* Galleries */
+
+ /* top seller */
+
+ .seller h1{
+padding: 117px 0 56px;
+font-family: Ruda;
+font-weight: 700;
+font-style: Bold;
+font-size: 48px; 
+line-height: 100%; 
+color: var(--white);
+text-align: center;
+}
+.profil{
+    display: flex; 
+    gap:20px; 
+    background: rgba(255, 255, 255, 0.2); /* немного прозрачности */
+    backdrop-filter: blur(4px);
+}
+.image1{
+    
+padding: 24px 51px 24px 24px;
+}
+.image2{
+    
+padding: 24px 62px 24px 24px;
+}
+.image3 {
+    
+padding: 24px 75px 24px 24px;
+}
+.image4{
+    
+padding: 24px 89px 24px 24px;
+}
+.image5{
+    
+padding: 24px 75px 24px 24px;
+}
+.image6{
+    
+padding: 24px 75px 24px 24px;
+}
+.profil h2{
+font-family: Open Sans;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 18px; 
+line-height: 100%; 
+color: var(--white);
+padding-bottom: 10px;
+
+}
+.profil .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profil p{
+font-family: Open Sans;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px; 
+line-height: 100%; 
+color:var(--color-gray)
+
+}
+
+
+ .profiles{
+    display: flex;
+    flex-wrap: wrap;
+    gap:36px;
+    padding-bottom: 149px;
+   
+ }
+  /* top seller */
+
+
+/* footer */
+ .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 115px;
+    margin-bottom: 42px;
+ }
+
+ .footer h1{
+font-family: DM Sans;
+font-weight: 700;
+font-style: Bold;
+font-size: 24px; 
+line-height: 100%; 
+padding-bottom: 24px;
+color: var(--white);
+
+ }
+ .footer p{
+ font-family: Open Sans;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px; 
+line-height: 24px; 
+padding-bottom: 30px;
+color: var(--color-gray);
+
+ }
+ .footer h5{
+font-family: DM Sans;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px; 
+line-height: 100%; 
+color: var(--color-gray);
+padding-bottom: 16px;
+
+ }
+  .email-box {
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 4px #00aaff;
+  }
+   .email-box input {
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 12px 16px;
+    outline: none;
+    width: 240px;
+    font-size: 16px;
+  }
+    .email-box button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-left: 1px solid #333;
+  }
+   .email-box button svg {
+    width: 20px;
+    height: 20px;
+    stroke: #ff00cc;
+    transition: 0.3s;
+  }
+
+/* footer */
+  
+
+ /* <ADAPTIVE> */
+@media (max-width: 1024px){
+ .header nav{
+    display: flex;
+    list-style: none;
+    gap:28px;
+}
+.last{
+    display: flex;
+    gap:14px;
+    align-items: center;
+}
+ .hero{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+ }
+  
+}
+@media (max-width: 768px){
+    .header nav{
+    display: none;
+   } 
+   .hero-image{
+    max-width: 500px;
+   }
+    .header{
+    margin:42px 0 ;
+   } 
+
+      .hero-text h1{
+    font-size: 50px;  
+    line-height: 53px;
+}
+ 
+}
+
+@media (max-width: 640px){
+    
+ 
+}
+@media (max-width:526px){
+ .hero-text h1{
+    font-size: 43px;
+ }
+ .header{
+    display: flex;
+    justify-content: space-between;
+    
+ }
+}
+@media (max-width: 480px){
+   
+    
+}
+ 
+ /* </ADAPTIVE> */
+ 
