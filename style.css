@@ -83,6 +83,8 @@ border: none;
     align-items: center;
     justify-content: center;
     gap:115px;
+    max-width: 100%;
+    height: auto;
     
 }
 span{
@@ -154,7 +156,7 @@ color: var(--white);
     align-items: center;
     gap:70px;
     padding: 24px 47px;  
-    background: rgba(255, 255, 255, 0.2); /* немного прозрачности */
+    background: rgba(255, 255, 255, 0.2); 
     backdrop-filter: blur(4px);
     margin-bottom: 176px;
 }
@@ -181,8 +183,8 @@ color:var(--color-gray);
 .hero-image {
   position: relative;
   width: 100%;
-  max-width: 620px;   /* ограничиваем, но не фиксируем */
-  aspect-ratio: 1 / 1; /* сохраняет пропорции без фиксированной высоты */
+  max-width: 620px;    
+  aspect-ratio: 1 / 1;  
   margin: 0 auto;
 }
 
@@ -194,9 +196,9 @@ color:var(--color-gray);
   object-fit: contain;
 }
 
-/* Индивидуальные позиции — в % вместо пикселей */
+ 
 .hero-image .mask {
- top: 7%;
+    top: 7%;
     left: 0;
     z-index: 1;
     width: 90%;
@@ -270,6 +272,10 @@ color: var(--white);
     gap:12px;
 
   }
+  .image img, .small-images img {
+    max-width: 100%;
+    height: auto;
+}
   .image-text h2{
 font-family: Open Sans;
 font-weight: 600;
@@ -318,8 +324,7 @@ text-align: center;
 .profil{
     display: flex; 
     gap:20px; 
-    background: rgba(255, 255, 255, 0.2); /* немного прозрачности */
-    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.2);  
 }
 .image1{
     
@@ -389,6 +394,8 @@ color:var(--color-gray)
     align-items: center;
     gap: 115px;
     margin-bottom: 42px;
+    max-width: 100%;
+    height: auto;
  }
 
  .footer h1{
@@ -474,6 +481,22 @@ padding-bottom: 16px;
     flex-direction: column;
 
  }
+ .images{
+  overflow-y: scroll;
+ }
+ .images{
+    display: flex;
+    justify-content: center;
+    gap: 38px;
+    flex-wrap: wrap;  
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+ 
   
 }
 @media (max-width: 768px){
@@ -508,10 +531,10 @@ padding-bottom: 16px;
     
  }
 }
+
 @media (max-width: 480px){
    
     
 }
- 
- /* </ADAPTIVE> */
- 
+/* Для первой секции,   сделала адаптацию до 520px,
+ а остальные секции — до конца.» */
